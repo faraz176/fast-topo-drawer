@@ -54,13 +54,19 @@ The application launches instantly.
 
 ### macOS / Linux
 
+#### Build and install (recommended)
 
-1. git clone https://github.com/faraz176/fast-topo-drawer.git
+This tool runs natively on macOS and Linux by building a local binary.
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/faraz176/fast-topo-drawer.git
 2. cd fast-topo-drawer
 3. pip install pyinstaller
 4. pyinstaller --onefile topo.py
-5. mv dist/topo /usr/local/bin
-6. topo (From terminal)
+5. sudo mv dist/topo /usr/local/bin
+6. topo
+
 
 
 
