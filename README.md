@@ -81,28 +81,30 @@ The application launches instantly.
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/faraz176/fast-topo-drawer.git](https://github.com/faraz176/fast-topo-drawer.git)
-Enter the project directory:
 
-Bash
+   
+2. **Enter the project directory:**
+   ```bash
+  cd fast-topo-drawer
 
-cd fast-topo-drawer
-Install PyInstaller:
 
-Bash
+3. **Install PyInstaller:**
 
-pip install pyinstaller
-Build a single-file binary:
+   ```bash
+  pip install pyinstaller
 
-Bash
+4. **Build a single-file binary:**
 
-pyinstaller --onefile topo.py
-Install it into your PATH:
+   ```bash
+  pyinstaller --onefile topo.py
 
-Bash
+5. **Install it into your PATH:**
 
-sudo mv dist/topo /usr/local/bin/topo
-Run from terminal:
+   ```bash
+  sudo mv dist/topo /usr/local/bin/topo
 
-Bash
 
-topo
+ 6. **Run from terminal:**
+
+   ```bash
+  topo
