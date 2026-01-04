@@ -107,4 +107,4 @@ The application launches instantly.
  6. **Run from terminal:**
 
    ```bash
-  topo
+   topo
