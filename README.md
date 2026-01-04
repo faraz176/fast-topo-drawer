@@ -3,71 +3,92 @@
 ## Quick way to draw your topology!
 
 A lightweight, keyboard-driven tool for **rapid network topology sketching**.  
-Designed for engineers who want to visualize ideas quickly without opening Visio, draw.io, or EVE-NG.
+Built for engineers who want to map ideas fast without opening Visio, draw.io, or EVE-NG.
 
 ---
 
 ## Features
 
-- Router nodes (circles)
-- Switch nodes (squares)
-- Click-to-connect links
-- Drag-and-drop repositioning
-- One-key topology reset
+- **Router nodes** (circles) and **Switch nodes** (squares)
+- **Fast node placement** (keyboard + click)
+- **Chain linking**: click a node to “sprout” a link, then keep clicking nodes to build a path
+- **Live link preview** while connecting
+- **Drag nodes** and the **links stretch with them**
+- **Box-select** sections of the topology, then **drag to move the whole selection**
+- **Delete nodes or links** (select → `D`)
+- **Pan and zoom** for large topologies
 - Built-in legend
-- Instant launch (Win + R)
+- Instant launch on Windows (Win + R)
 
 ---
 
 ## Controls
 
+### Placement
 | Key | Action |
 |---|---|
-| `R` | Place Router |
-| `S` | Place Switch |
-| `N` | Neutral mode (connect / move only) |
-| Click node → click node | Create link |
-| Drag node | Move node |
-| `C` | Clear / destroy topology |
-| `ESC` | Cancel link |
+| `R` | Router placement mode (click to place) |
+| `S` | Switch placement mode (click to place) |
+
+### Neutral / Editing
+| Key / Mouse | Action |
+|---|---|
+| `ESC` | Neutral mode + clears highlights/selection (your “free pan/zoom mode”) |
+| Click node | Select node + start a “sprouting” link |
+| Click another node | Create a link and keep chaining from the last node |
+| Drag node | Move node (links stretch) |
+| Click + drag empty space (in neutral) | Box-select nodes |
+| Drag selected nodes | Move the selected section (links stretch) |
+| Click a link | Select/highlight link |
+| `D` | Delete selected link **or** selected node(s) |
+| `C` | Clear / destroy entire topology |
+
+### Navigation
+| Key | Action |
+|---|---|
+| Arrow Keys (`← ↑ → ↓`) | Step through **connected** nodes (no random jumping) |
+
+### View Controls
+| Mouse | Action |
+|---|---|
+| Scroll Wheel | Zoom in / out |
+| Right-click + drag (empty space) | Pan the canvas |
 
 ---
 
 ## Steps
 
-### Windows
+## Windows
 
-#### Download
-- Go to **Releases**
-- Download `topo.exe`
+### Download
+1. Go to **Releases**
+2. Download `topo.exe`
 
-#### Run (recommended)
-1. Move `topo.exe` to:
+### Run (recommended)
+1. Move `topo.exe` to a tools folder (example: `C:\Tools\topo.exe`)
 2. Add `C:\Tools` to your **PATH**
 3. Press **Win + R**
-4. Type: topo
+4. Type: `topo`
 5. Press **Enter**
 
 The application launches instantly.
 
 ---
 
-### macOS / Linux
+## macOS / Linux
 
-#### Build and install (recommended)
-
-This tool runs natively on macOS and Linux by building a local binary.
+### Build and install (recommended)
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/faraz176/fast-topo-drawer.git
-2. cd fast-topo-drawer
-3. pip install pyinstaller
-4. pyinstaller --onefile topo.py
-5. sudo mv dist/topo /usr/local/bin
-6. topo
-
-
-
-
-
+```bash
+git clone https://github.com/faraz176/fast-topo-drawer.git
+2. Enter the project directory:
+cd fast-topo-drawer
+3. Install PyInstaller
+pip install pyinstaller
+4. Build a single-file binary:
+pyinstaller --onefile topo.py
+5. Install it into your PATH:
+sudo mv dist/topo /usr/local/bin/topo
+6. Run from terminal:
+topo
