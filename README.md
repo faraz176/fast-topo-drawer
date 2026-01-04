@@ -85,23 +85,23 @@ The application launches instantly.
    
 2. **Enter the project directory:**
    ```bash
-  cd fast-topo-drawer
+   cd fast-topo-drawer
 
 
 3. **Install PyInstaller:**
 
    ```bash
-  pip install pyinstaller
+   pip install pyinstaller
 
 4. **Build a single-file binary:**
 
    ```bash
-  pyinstaller --onefile topo.py
+   pyinstaller --onefile topo.py
 
 5. **Install it into your PATH:**
 
    ```bash
-  sudo mv dist/topo /usr/local/bin/topo
+   sudo mv dist/topo /usr/local/bin/topo
 
 
  6. **Run from terminal:**
