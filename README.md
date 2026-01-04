@@ -74,7 +74,6 @@ Built for engineers who want to map ideas fast without opening Visio, draw.io, o
 The application launches instantly.
 
 ---
-
 ## macOS / Linux
 
 ### Build and Install (Recommended)
@@ -84,28 +83,26 @@ The application launches instantly.
    git clone [https://github.com/faraz176/fast-topo-drawer.git](https://github.com/faraz176/fast-topo-drawer.git)
 Enter the project directory:
 
-
+Bash
 
 cd fast-topo-drawer
 Install PyInstaller:
 
-
+Bash
 
 pip install pyinstaller
 Build a single-file binary:
 
-
+Bash
 
 pyinstaller --onefile topo.py
 Install it into your PATH:
 
-
+Bash
 
 sudo mv dist/topo /usr/local/bin/topo
 Run from terminal:
 
-
+Bash
 
 topo
-
- ```
